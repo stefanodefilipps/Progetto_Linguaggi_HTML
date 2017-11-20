@@ -1,0 +1,5 @@
+<frameset cols="200,*">
+<frame name="sinistra" src="#">
+<frame name="centrale" frameborder=0 src="/home/biar/Desktop/LTW_Prog/menu.html" >
+</frameset>
+</frameset>
