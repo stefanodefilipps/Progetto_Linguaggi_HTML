@@ -55,11 +55,10 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 
 .utente{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	padding-top: 150px;
 	height: auto;
 	min-height: 1000px;
-	position: fixed;
 	text-align: center;
+	position: fixed;
 }
 
 .utente img {
@@ -86,5 +85,19 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 }
 
 #new_post textarea {
-	width: 204px;
+	width: 100%;
+	min-height: 120px;
+}
+
+#barra {
+	height: 70px;
+}
+
+#riga {
+	min-height: 1000px;
+}
+
+#post {
+	margin-left: 30%;
+	align-items: center;
 }

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class = "row">
+	<div class = "row" id = "barra">
 	<header>
                 <nav>
                     <ul>
@@ -38,6 +38,7 @@
                 </nav>
     </header>
     </div>
+    <div class = "row" id ="riga"> 
    		<div class = "col-2 utente">
     		<div class = "row">
     			<div class="col-12">
@@ -69,22 +70,26 @@
     			</div>
     		</div>
     		<div class = "row" >
-    			<div id="icona_" class="col-12">
+    			<div id="icona_" class="col-12" onclick="compare();">
     				<i id="icona" class="fa fa-plus-circle" aria-hidden="true"></i>
     			</div>
     		</div>
-    		<div class = "row">
-    			<div id="icona_" class="col-12">
-    				<form id = "new_post">
-    					<div id="icona_" class="col-12">
-    						<input type="text" name="titolo" placeholder="Inserisci Un Titolo">
-    					</div>
-    					<div id="new_blog" class="col-12">
-    						<textarea name = "testo" placeholder="Inserisci Un Testo"></textarea>
-    					</div>
-    				</form>
-    			</div>
-    		</div>
     	</div>
+	    <div id="post" class = "col-6">
+	    	<form id = "new_post" action="">
+	    		<div id="icona_" class="col-12">
+	    			<input type="text" name="titolo" placeholder="Inserisci Un Titolo">
+	    		</div>
+	    		<div id="new_blog" class="col-12">
+	    			<textarea name = "testo" placeholder="Inserisci Un Testo"></textarea>
+	    		</div>
+	    	</form>
+	    </div>
+    </div>
+    <script type="text/javascript">
+    	function compare(){
+    		document.getElementById("new_post").toggle();
+    	}
+    </script>
 </body>
 </html>
