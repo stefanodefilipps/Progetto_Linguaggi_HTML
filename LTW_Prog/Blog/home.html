@@ -5,6 +5,8 @@
     <title> Prova menù HTML-CSS </title>
 	<link rel="stylesheet" href="/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Stili/home_css.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Script/home.js"></script>
 </head>
 <body>
 	<div class = "row" id = "barra">
@@ -71,13 +73,12 @@
     				7
     			</div>
     		</div>
-    		<div class = "row" >
-    			<div id="icona_" class="col-12" onclick="compare();">
-    				<i id="icona" class="fa fa-plus-circle" aria-hidden="true"></i>
-    			</div>
-    		</div>
     	</div>
 	    <div id="post" class = "col-6">
+            <div id="icona_" class="col-12">
+                    <i id="icona" class="fa fa-plus-circle" aria-hidden="true"></i>
+                </div>
+            <div id="form" class="row">
 	    	<form id = "new_post" action="">
 	    		<div id="icona_" class="col-12">
 	    			<input type="text" name="titolo" placeholder="Inserisci Un Titolo">
@@ -86,12 +87,8 @@
 	    			<textarea name = "testo" placeholder="Inserisci Un Testo"></textarea>
 	    		</div>
 	    	</form>
+            </div>
 	    </div>
     </div>
-    <script type="text/javascript">
-    	function compare(){
-    		document.getElementById("new_post").toggle();
-    	}
-    </script>
 </body>
 </html>
