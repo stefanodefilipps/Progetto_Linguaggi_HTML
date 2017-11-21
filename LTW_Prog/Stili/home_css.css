@@ -59,6 +59,7 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 	min-height: 1000px;
 	text-align: center;
 	position: fixed;
+	z-index: -1;
 }
 
 .utente img {
@@ -100,4 +101,8 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 #post {
 	margin-left: 30%;
 	align-items: center;
+}
+
+#nav_bar {
+	margin-left: 15%;
 }
