@@ -1,5 +1,5 @@
-  
-    body{ background-image:url(/home/biar/Desktop/LTW_Prog/Login/m.jpg); background-size:cover;}
+
+    body{ background-image:url(/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Login/m.jpg); background-size:cover;}
     #centro{background-color:white; width:800; height:590 ; position:absolute; top:1%; left:20%}
     #registrazione{display:none; background-color:white; width:800; height:590 ; position:absolute; top:1%; left:20%; }
     p{ font-family:"sans-serif";}
@@ -15,9 +15,9 @@
     box-shadow: 1px 1px 3px #888888;}
     input[type=button]:hover,[type=submit]:hover{
           background-color: #0062E1 ;
-          
+
     }
         input[type=reset],input[type=file]{
             font-family:"sans-serif";
         }
-  
+
