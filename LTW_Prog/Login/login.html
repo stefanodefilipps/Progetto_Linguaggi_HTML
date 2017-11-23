@@ -1,17 +1,88 @@
 <html>
     <head>
         <title>MyBlog_LogIn</title>
-        <style>
-            body{ background-image:url(/home/biar/Desktop/LTW_Prog/Login/m.jpg);
-            }
-        </style>
-
+        <link rel="stylesheet" href="/home/biar/Desktop/LTW_Prog/Stili/stilelogin.css">
     </head>
-
-        <body>
-            <div style="position:absolute; top:1%; left:20%  ">
-            <iframe name="principale" width="800" height="535" src="/home/biar/Desktop/LTW_Prog/Login/sx2.html" frameborder=0 ></iframe>
+    <script>
+        
+                function signup(){
+                    var u = JSON.parse(localStorage.utenti);
+                    var l=u.length;
+                    for (i=0;i<l;i++){
+                       if(u[i].nome == document.getElementById("logup").nome.value){
+                           alert("username già inserito");
+                           return false;
+                           }
+                   }
+                   
+                   var s= { nome:document.getElementById("logup").nome.value,
+                           password:document.getElementById("logup").password.value
+                           };
+                   u[l]=s;
+                   alert("Ti sei registrato su OHMYBLOG!");
+                   localStorage.utenti=JSON.stringify(u);
+                   return true;
+                    
+                }
+            function signin(){
+                   var u = JSON.parse(localStorage.utenti);
+                   var l = u.length;
+                   for (i=0;i<l;i++){
+                       if(u[i].nome == document.getElementById("login").nome.value && u[i].password == document.getElementById("login").password.value) return true;
+                   }
+                   alert("utente non registrato");
+                   return false;
+               }
+            function inizializzaStorageUtenti(){
+                    if (typeof(localStorage.utenti) == "undefined") {
+                    localStorage.utenti="[]";
+               }
+           }
+           function turnvisible(){
+               var d=document.getElementById("registrazione");
+               var d2=document.getElementById("centro");
+               d2.style.display="none";
+               d.style.display="block";
+           }
+               </script>
+        <body onload="inizializzaStorageUtenti();">
+            <div id="centro"  name="principale"  >
+                <div align="center">
+                    <img src="/home/biar/Desktop/LTW_Prog/Login/myblog.png"></img>
+                    <form action="/home/biar/Desktop/LTW_Prog/Blog/menu.html" id="login" method="post" name="eseform" enctype="multipart/form-data" onSubmit="return signin();">
+                    <table border = "0">
+                    <tr>
+                    <td align="right"> <p>nome</p>
+                    <td><input id="a" type="text" name="nome" size ="30" maxlenght="30" required>
+                    <tr>
+                    <td align="right"> <p>password</p>
+                    <td><input id="b" type="password" name="password" size ="30" maxlenght="30" required>
+                    <tr>
+                    <td align="center"> <td ><input type="button" value="Sign Up" name="registra" onClick="turnvisible();" > <input id="s" type="submit" value="Sign In"  ></table>
+                    </form>
+                </div>
             </div>
+            </div>
+            <div id="registrazione"  name="principale"  >
+                <div align="center">
+                    <img src="/home/biar/Desktop/LTW_Prog/Login/myblog.png"></img>
+                    <form action="/home/biar/Desktop/LTW_Prog/Blog/menu.html" id="logup" method="post" name="eseform2" enctype="multipart/form-data" onSubmit="return signup();">
+                    <table border = "0">
+                    <tr>
+                    <td align="right"> <p>nome</p>
+                    <td><input type="text" name="nome" size ="30" maxlenght="30" required>
+                    <tr>
+                    <td align="right"> <p>password</p>
+                    <td><input type="password" name="password" size ="30" maxlenght="30" required>
+                    <tr>
+                    <td align="right"><p>foto</p>
+                    <td><input type="file" name="foto">
+                    <tr>
+                    <td align="center"> <td ><input type="reset" value="Reset dati inseriti"> <input type="submit" value="Sign Up" ></table>
+                    </form>
+                </div>
+            </div>
+            <div id="visitaStorage"></div>
         </body>
 
 </html>
