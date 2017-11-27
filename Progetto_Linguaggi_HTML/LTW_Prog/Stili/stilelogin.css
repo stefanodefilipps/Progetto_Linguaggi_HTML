@@ -1,0 +1,23 @@
+
+    body{ background-image:url(/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Login/m.jpg); background-size:cover;}
+    #centro{background-color:white; width:40%; height:99% ; position:absolute; top:1%; left:20%; margin-left: 10%; }
+    #registrazione{display:none; background-color:white; width:40%; height:99% ; position:absolute; top:1%; left:20%; }
+    p{ font-family:"sans-serif";}
+    #1{color:#0062E1;}
+    input[type=button],[type=submit]{ background-color: #99CBFF;
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    text-decoration: none;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius:50%;
+    box-shadow: 1px 1px 3px #888888;}
+    input[type=button]:hover,[type=submit]:hover{
+          background-color: #0062E1 ;
+
+    }
+        input[type=reset],input[type=file]{
+            font-family:"sans-serif";
+        }
+
