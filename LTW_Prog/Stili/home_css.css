@@ -154,17 +154,21 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 ._post {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	width: 100%;
+	height:350px;
 	border-radius:20px;
 	background-image: url("/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Blog/roma-bis.jpg");
 	background-size: cover;
 }
 
-._post textarea{
+.ta {
 	border: 0;
-	margin: 25% 0 0 0;
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius:20px;
 	width: 100%;
-	height: 250px; 
+	height: 200px; 
 	resize: none;
+}
+.imm{
+	width:100%;
+	height:150px;
 }

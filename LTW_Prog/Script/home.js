@@ -4,4 +4,10 @@ $("document").ready(function(){
                 $("#icona").toggleClass("fa fa-plus-circle");
                 $("#icona").toggleClass("fa fa-minus-circle")
             })
+            $(".imm").click(function(){
+
+            	$(".ta").slideToggle("slow");
+            })
+            
+
         })
