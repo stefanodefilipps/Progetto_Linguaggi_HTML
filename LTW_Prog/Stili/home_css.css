@@ -73,7 +73,7 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 }
 
 #icona {
-	font-size: 50px;
+	font-size: 70px;
 	border-radius: 30px;
 }
 
@@ -113,19 +113,28 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 
 #new_post button{
 	border-radius: 15px;
-  	box-shadow: 0 9px #999;
-  	width: 100%;
-  	height: 100%;
+  	box-shadow: 0 4px #999;
+  	width: 40%;
+  	height: 80px;
   	background-color: black;
+  	color: white;
+  	float:right;
+  	font-size: 50px
 }
 
 #new_post textarea {
 	width: 100%;
-	min-height: 120px;
+	min-height: 200px;
 	resize: none;
 	border: 1px solid #ccc;
     border-radius: 4px;
     padding: 12px 20px;
+}
+
+#new_post button:active {
+	background-color: black;
+  	transform: translateY(4px);
+  	box-shadow: 0 5px #666;
 }
 
 #barra {
