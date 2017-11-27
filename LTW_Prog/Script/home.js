@@ -6,8 +6,24 @@ $("document").ready(function(){
             })
             $(".imm").click(function(){
 
-            	$(".ta").slideToggle("slow");
+            	$(".context").slideToggle("slow");
             })
-            
+            $(".fa-thumbs-up").click(function(){
+            	console.log($(this).parent());
+            	if($(this).css("color") == "green" || ($(this).parent().children(".fa-thumbs-down"))[0].css("color")=="red") return;
+            	$(this).css("color","green");
+            	var h = $(this).html();
+            	var somma =parseInt(h);
+            	somma=somma + 1;
+            	$(this).html(" "+somma+"");
+            })
+
+            $(".fa-thumbs-down").click(function(){
+            	$(this).css("color","red");
+            	var h = $(this).html();
+            	var somma =parseInt(h);
+            	somma=somma + 1;
+            	$(this).html(" "+somma+"");
+            })
 
         })

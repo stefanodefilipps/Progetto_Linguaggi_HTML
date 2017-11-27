@@ -165,10 +165,19 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius:20px;
 	width: 100%;
-	height: 200px; 
+	height: 170px; 
 	resize: none;
+	background-color: white;
+	margin:0;
+}
+.icons{
+	background-color: white;
+	font-size: 30px;
+	width: 100%;
+	height: 40px; 
+
 }
 .imm{
 	width:100%;
-	height:150px;
+	height:140px;
 }
