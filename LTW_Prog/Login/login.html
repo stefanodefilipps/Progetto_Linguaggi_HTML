@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Stili/stilelogin.css">
     </head>
     <script>
-        
+
                 function signup(){
                     var u = JSON.parse(localStorage.utenti);
                     var l=u.length;
@@ -14,15 +14,15 @@
                            return false;
                            }
                    }
-                   
+
                    var s= { nome:document.getElementById("logup").nome.value,
                            password:document.getElementById("logup").password.value
                            };
                    u[l]=s;
-                   alert("Ti sei registrato su OHMYBLOG!");
+                   alert("Ti sei registrato su MYBLOG!");
                    localStorage.utenti=JSON.stringify(u);
                    return true;
-                    
+
                 }
             function signin(){
                    var u = JSON.parse(localStorage.utenti);
