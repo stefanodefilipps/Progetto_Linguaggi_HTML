@@ -58,6 +58,7 @@ $("document").ready(function(){
                 var l2=u2.length;
                 $("#nickname").html(" "+ u2[l2-1].nome);
                 $("#foto").attr("src", u2[l2-1].foto.split("fakepath")[1].substring(1));
+
                 
 
 
