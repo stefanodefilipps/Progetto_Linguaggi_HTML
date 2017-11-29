@@ -81,45 +81,59 @@
     		</div>
     	</div>
 	    <div id="post" class = "col-6">
-	    	<div class = "row">
-	    		<div class = "_post" >
+            <div class = "row">
+                <div class = "_post" >
                     <div class="imm"></div>
                     <div class="context">
-                    	<div class="icons" > 
-                    		Giorgio Coccia
-                    		<i  class="fa fa-thumbs-up" aria-hidden="true" > 0</i>
-                    		<i class="fa fa-thumbs-down" aria-hidden="true"> 0</i> 
-                    	</div>
+                        <div class="icons" > 
+                            Giorgio Coccia
+                            <i  class="fa fa-thumbs-up" aria-hidden="true" > 0</i>
+                            <i class="fa fa-thumbs-down" aria-hidden="true"> 0</i> 
+                        </div>
                     
-	    			<textarea class="ta" name="post_testo" placeholder="qui va il testo del post pubblicato"></textarea>
-	    		</div>
-	    		</div>
-	    	</div>
+                    <textarea class="ta" name="post_testo" id = "post_testo" placeholder="qui va il testo del post pubblicato"></textarea>
+                </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "_post" >
+                    <div class="imm"></div>
+                    <div class="context">
+                        <div class="icons" > 
+                            Giorgio Coccia
+                            <i  class="fa fa-thumbs-up" aria-hidden="true" > 0</i>
+                            <i class="fa fa-thumbs-down" aria-hidden="true"> 0</i> 
+                        </div>
+                    
+                    <textarea class="ta" name="post_testo" placeholder="qui va il testo del post pubblicato"></textarea>
+                </div>
+                </div>
+            </div>
             <div id="icona_" class="col-12">
                     <i id="icona" class="fa fa-plus-circle" aria-hidden="true"></i>
                 </div>
             <div id="form" class="row">
-	    	<form id = "new_post" action="">
-	    		<div id="icona_" class="col-12">
-	    			<input type="text" name="titolo" placeholder="Inserisci Un Titolo">
-	    		</div>
-	    		<div id="new_blog" class="col-12">
-	    			<textarea name = "testo" placeholder="Inserisci Un Testo"></textarea>
-	    		</div>
-	    		<div class="col-6">
-	    			<input type="file" name="foto">
-	    			<div class = "fakefile">
-	    				<i class="fa fa-camera-retro" aria-hidden="true"></i>  Inserisci un immagine
-	    			</div>
-	    		</div>
-	    		<div class = "col-6">
-	    			<button >
-	    				<i class="fa fa-check" aria-hidden="true"></i>
-	    			</button>
-	    		</div>
-	    	</form>
+            <form id = "new_post" action="">
+                <div id="icona_" class="col-12">
+                    <input type="text" name="titolo" id = "titolo" placeholder="Inserisci Un Titolo">
+                </div>
+                <div id="new_blog" class="col-12">
+                    <textarea name = "testo" id = "testo" placeholder="Inserisci Un Testo"></textarea>
+                </div>
+                <div class="col-6">
+                    <input type="file" id="file_" name="foto">
+                    <div class = "fakefile">
+                        <i class="fa fa-camera-retro" aria-hidden="true"></i>  <div id = "testo_icona">Inserisci un immagine</div>
+                    </div>
+                </div>
+            </form>
+            <div class = "col-6">
+                    <button id = "check">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
-	    </div>
+        </div>
     </div>
 </body>
 </html>
