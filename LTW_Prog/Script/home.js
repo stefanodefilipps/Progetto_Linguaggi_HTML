@@ -174,21 +174,9 @@ $("document").ready(function(){
                   $target.focus();
               });
             })
-<<<<<<< HEAD
-
-            var u2=JSON.parse(sessionStorage.utente);
-            var l2=u2.length;
-            $("#nickname").html(" "+ u2[l2-1].nome);
-            $("#foto").attr("src", u2[l2-1].foto.split("fakepath")[1].substring(1));
-=======
                 var u2=JSON.parse(sessionStorage.utente);
                 var l2=u2.length;
                 $("#nickname").html(" "+ u2[l2-1].nome);
                 $("#foto").attr("src", u2[l2-1].foto.split("fakepath")[1].substring(1));
-
->>>>>>> 8a6b722c572cb65b688e0e282e282c940d98cb3e
-                
-
-
         })
                 

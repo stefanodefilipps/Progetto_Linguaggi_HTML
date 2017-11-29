@@ -19,9 +19,7 @@ function signup(){
                    var l2=u2.length
                    u2[l2]=s;
                    alert(u2[l2].nome);
-                   sessionStorage.utente=JSON.stringify(u2);
-                   return true;
-                    
+                   return true;                    
                 }
             function signin(){
                    var u = JSON.parse(localStorage.utenti);
