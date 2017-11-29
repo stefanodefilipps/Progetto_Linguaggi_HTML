@@ -1,11 +1,31 @@
 $("document").ready(function(){
+    var mostra = false;
             $("#icona").click(function(){
                 $("#form").fadeToggle("slow");
                 $("#icona").toggleClass("fa fa-plus-circle");
-                $("#icona").toggleClass("fa fa-minus-circle")
+                $("#icona").toggleClass("fa fa-minus-circle");
+                mostra=!mostra;
+                var target;
+                if(!mostra){
+                    target = $("#barra");
+                    $("#titolo").val(""); 
+                    $("#testo").val("");
+                    $("#titolo").css("border","1px solid #ccc");
+                    $("#testo").css("border","1px solid #ccc");
+                    $("#testo_icona").css("color","black");
+                }
+                else target = $("#form");
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000, function() {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+              });
             })
             $(".imm").click(function(){
-            	$(".context").slideToggle("slow");
+            	$(this).parent().find(".context").slideToggle("slow");
             })
             $(".fa-thumbs-up").click(function(){
             	console.log($(this).parent().children(".fa-thumbs-up").css("color"));
@@ -94,6 +114,10 @@ $("document").ready(function(){
                     $("#testo").css("border","3px solid red");
                     if($("#titolo").val() == "") $("#titolo").css("border","3px solid red");
                     else $("#titolo").css("border","1px solid #ccc");
+                    if($("#file_")[0].files[0] == undefined){
+                        $("#testo_icona").css("color","red");
+                    }
+                    else $("#testo_icona").css("color","black");
                     return;
                 }
                 if($("#file_")[0].files[0] == undefined){
@@ -104,14 +128,16 @@ $("document").ready(function(){
                     else $("#testo").css("border","1px solid #ccc");
                     return;
                 }
-                $("#titolo").val(""); 
+                $("#titolo").val("");
+                $("#testo").val("");  
                 $("#titolo").css("border","1px solid #ccc");
+                $("#testo").css("border","1px solid #ccc");
                 $("#testo_icona").css("color","black");
-                var riga = $("<div class = \"row\"><div class = \"_post\" ><div class=\"imm\"></div><div class=\"context\"><div class=\"icons\" > Giorgio Coccia<i  class=\"fa fa-thumbs-up\" aria-hidden=\"true\" > 0</i>\n<i class=\"fa fa-thumbs-down\" aria-hidden=\"true\"> 0</i></div><textarea class=\"ta\" name=\"post_testo\" placeholder=\"qui va il testo del post pubblicato\"></textarea></div></div></div>");
+                var riga = $("<div class = \"row\"><div class = \"_post\" ><div class=\"imm\"></div><div class=\"context\"><div class=\"icons\" >"+$("#nickname").html()+" <i  class=\"fa fa-thumbs-up\" aria-hidden=\"true\" > 0</i>\n<i class=\"fa fa-thumbs-down\" aria-hidden=\"true\"> 0</i></div><textarea class=\"ta\" name=\"post_testo\" placeholder=\"qui va il testo del post pubblicato\"></textarea></div></div></div>");
                 riga.find("._post").css("background-image","url("+URL.createObjectURL($("#file_")[0].files[0])+")");
                 riga.find(".ta").val($("#testo").val());
                 riga.css("display","none");
-                $("#icona_").before(riga);
+                $("#post").prepend(riga);
                 riga.find(".imm").click(function(){
                     $(this).parent().children(".context").slideToggle("slow");
                 })
@@ -134,11 +160,25 @@ $("document").ready(function(){
                 })
 
                 riga.fadeIn("slow");
+                $("#form").fadeToggle("slow");
+                $("#icona").toggleClass("fa fa-plus-circle");
+                $("#icona").toggleClass("fa fa-minus-circle");
+                mostra=!mostra;
+                var target = $("#barra");
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000, function() {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+              });
             })
-                var u2=JSON.parse(sessionStorage.utente);
-                var l2=u2.length;
-                $("#nickname").html(" "+ u2[l2-1].nome);
-                $("#foto").attr("src", u2[l2-1].foto.split("fakepath")[1].substring(1));
+
+            var u2=JSON.parse(sessionStorage.utente);
+            var l2=u2.length;
+            $("#nickname").html(" "+ u2[l2-1].nome);
+            $("#foto").attr("src", u2[l2-1].foto.split("fakepath")[1].substring(1));
                 
 
 
