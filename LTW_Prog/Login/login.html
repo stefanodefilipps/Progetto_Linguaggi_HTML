@@ -2,49 +2,8 @@
     <head>
         <title>MyBlog_LogIn</title>
         <link rel="stylesheet" href="/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Stili/stilelogin.css">
+        <script type="text/javascript" src="/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Script/login.js"></script>
     </head>
-    <script>
-
-                function signup(){
-                    var u = JSON.parse(localStorage.utenti);
-                    var l=u.length;
-                    for (i=0;i<l;i++){
-                       if(u[i].nome == document.getElementById("logup").nome.value){
-                           alert("username già inserito");
-                           return false;
-                           }
-                   }
-
-                   var s= { nome:document.getElementById("logup").nome.value,
-                           password:document.getElementById("logup").password.value
-                           };
-                   u[l]=s;
-                   alert("Ti sei registrato su MYBLOG!");
-                   localStorage.utenti=JSON.stringify(u);
-                   return true;
-
-                }
-            function signin(){
-                   var u = JSON.parse(localStorage.utenti);
-                   var l = u.length;
-                   for (i=0;i<l;i++){
-                       if(u[i].nome == document.getElementById("login").nome.value && u[i].password == document.getElementById("login").password.value) return true;
-                   }
-                   alert("utente non registrato");
-                   return false;
-               }
-            function inizializzaStorageUtenti(){
-                    if (typeof(localStorage.utenti) == "undefined") {
-                    localStorage.utenti="[]";
-               }
-           }
-           function turnvisible(){
-               var d=document.getElementById("registrazione");
-               var d2=document.getElementById("centro");
-               d2.style.display="none";
-               d.style.display="block";
-           }
-               </script>
         <body onload="inizializzaStorageUtenti();">
             <div id="centro"  name="principale"  >
                 <div align="center">
