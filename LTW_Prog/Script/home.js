@@ -24,6 +24,42 @@ $("document").ready(function(){
             	somma=somma + 1;
             	$(this).html(" "+somma+"");
             })
+            $("#provaC").click(function(){
+            	$("#icon_bar").removeClass();
+            	$("#icon_bar").addClass("fa fa-futbol-o");
+
+            })
+            $("#provaT").click(function(){
+            	$("#icon_bar").removeClass();
+            	$("#icon_bar").addClass("fa fa-table");
+
+            })
+             $("#provaI").click(function(){
+            	$("#icon_bar").removeClass();
+            	$("#icon_bar").addClass("fa fa-home");
+
+            })
+              $("#provaE").click(function(){
+            	$("#icon_bar").removeClass();
+            	$("#icon_bar").addClass("fa fa-globe");
+
+            })
+               $("#provaCin").click(function(){
+            	$("#icon_bar").removeClass();
+            	$("#icon_bar").addClass("fa fa-film");
+
+            })
+                $("#provaM").click(function(){
+            	$("#icon_bar").removeClass();
+            	$("#icon_bar").addClass("fa fa-music");
+            })
+
+            var u2=JSON.parse(sessionStorage.utente);
+                var l2=u2.length;
+                $("#nickname").html(" "+ u2[l2-1].nome);
+                $("#foto").attr("src", u2[l2-1].foto.split("fakepath")[1].substring(1));
+                
+
 
             $("#check").click(function(){
             	if($("#titolo").val() == ""){
@@ -83,3 +119,4 @@ $("document").ready(function(){
 	        })
 
         })
+                
