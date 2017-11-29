@@ -18,7 +18,7 @@
                 	<div class="col-10">
                 	<div id="nav_bar">
                     <ul>
-                    <li> <a> Sport </a>
+                    <li> <a id="sport"> Sport </a>
                         <ul>
                         <li> <a id="provaC"> Calcio </a></li>
                         <li> <a id="provaT"> Tennis </a></li>
@@ -26,7 +26,7 @@
                     </li>
 
 
-                    <li> <a> Attualità </a>
+                    <li> <a id="attualità"> Attualità </a>
                         <ul>
                         <li> <a id="provaI"> Italia </a> </li>
                         <li> <a id="provaE"> Estero </a></li>
@@ -34,7 +34,7 @@
                     </li>
 
 
-                    <li> <a> Arte </a>
+                    <li> <a id="arte"> Arte </a>
                         <ul>
                         <li> <a id="provaCin"> Cinema </a> </li>
                         <li> <a id="provaM"> Musica </a></li>
@@ -91,20 +91,6 @@
                     		<i class="fa fa-thumbs-down" aria-hidden="true"> 0</i> 
                     	</div>
                     
-	    			<textarea class="ta" name="post_testo" id = "post_testo" placeholder="qui va il testo del post pubblicato"></textarea>
-	    		</div>
-	    		</div>
-	    	</div>
-	    	<div class = "row">
-	    		<div class = "_post" >
-                    <div class="imm"></div>
-                    <div class="context">
-                    	<div class="icons" > 
-                    		Giorgio Coccia
-                    		<i  class="fa fa-thumbs-up" aria-hidden="true" > 0</i>
-                    		<i class="fa fa-thumbs-down" aria-hidden="true"> 0</i> 
-                    	</div>
-                    
 	    			<textarea class="ta" name="post_testo" placeholder="qui va il testo del post pubblicato"></textarea>
 	    		</div>
 	    		</div>
@@ -115,23 +101,23 @@
             <div id="form" class="row">
 	    	<form id = "new_post" action="">
 	    		<div id="icona_" class="col-12">
-	    			<input type="text" name="titolo" id = "titolo" placeholder="Inserisci Un Titolo">
+	    			<input type="text" name="titolo" placeholder="Inserisci Un Titolo">
 	    		</div>
 	    		<div id="new_blog" class="col-12">
-	    			<textarea name = "testo" id = "testo" placeholder="Inserisci Un Testo"></textarea>
+	    			<textarea name = "testo" placeholder="Inserisci Un Testo"></textarea>
 	    		</div>
 	    		<div class="col-6">
-	    			<input type="file" id="file_" name="foto">
+	    			<input type="file" name="foto">
 	    			<div class = "fakefile">
-	    				<i class="fa fa-camera-retro" aria-hidden="true"></i>  <div id = "testo_icona">Inserisci un immagine</div>
+	    				<i class="fa fa-camera-retro" aria-hidden="true"></i>  Inserisci un immagine
 	    			</div>
 	    		</div>
-	    	</form>
-	    	<div class = "col-6">
-	    			<button id = "check">
+	    		<div class = "col-6">
+	    			<button >
 	    				<i class="fa fa-check" aria-hidden="true"></i>
 	    			</button>
 	    		</div>
+	    	</form>
             </div>
 	    </div>
     </div>
