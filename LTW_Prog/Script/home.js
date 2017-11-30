@@ -127,9 +127,7 @@ $("document").ready(function(){
                     if($("#testo").val() == "") $("#testo").css("border","3px solid red");
                     else $("#testo").css("border","1px solid #ccc");
                     return;
-                }
-                $("#titolo").val("");
-                $("#testo").val("");  
+                }  
                 $("#titolo").css("border","1px solid #ccc");
                 $("#testo").css("border","1px solid #ccc");
                 $("#testo_icona").css("color","black");
@@ -137,6 +135,8 @@ $("document").ready(function(){
                 riga.find("._post").css("background-image","url("+URL.createObjectURL($("#file_")[0].files[0])+")");
                 riga.find(".ta").val($("#testo").val());
                 riga.css("display","none");
+                $("#titolo").val("");
+                $("#testo").val("");
                 $("#post").prepend(riga);
                 riga.find(".imm").click(function(){
                     $(this).parent().children(".context").slideToggle("slow");
