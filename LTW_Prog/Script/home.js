@@ -127,16 +127,16 @@ $("document").ready(function(){
                     if($("#testo").val() == "") $("#testo").css("border","3px solid red");
                     else $("#testo").css("border","1px solid #ccc");
                     return;
-                }
-                $("#titolo").val("");
-                $("#testo").val("");  
+                }  
                 $("#titolo").css("border","1px solid #ccc");
                 $("#testo").css("border","1px solid #ccc");
                 $("#testo_icona").css("color","black");
-                var riga = $("<div class = \"row\"><div class = \"_post\" ><div class=\"imm\"></div><div class=\"context\"><div class=\"icons\" >"+$("#nickname").html()+" <i  class=\"fa fa-thumbs-up\" aria-hidden=\"true\" > 0</i>\n<i class=\"fa fa-thumbs-down\" aria-hidden=\"true\"> 0</i></div><textarea class=\"ta\" name=\"post_testo\" placeholder=\"qui va il testo del post pubblicato\"></textarea></div></div></div>");
+                var riga = $("<div class = \"row\"><div class = \"_post\" ><div class=\"imm\"></div><div class=\"context\"><div class=\"icons\" >"+$("#nickname").html()+" <i  class=\"fa fa-thumbs-up\" aria-hidden=\"true\" > 0</i>\n<i class=\"fa fa-thumbs-down\" aria-hidden=\"true\"> 0</i></div><div class=\"ta\" name=\"post_testo\"><div class =\"child\"></div></div></div></div></div>");
                 riga.find("._post").css("background-image","url("+URL.createObjectURL($("#file_")[0].files[0])+")");
-                riga.find(".ta").val($("#testo").val());
+                riga.find(".child").html("<h1>"+$("#titolo").val()+"</h1></br>"+$("#testo").val());
                 riga.css("display","none");
+                $("#titolo").val("");
+                $("#testo").val("");
                 $("#post").prepend(riga);
                 riga.find(".imm").click(function(){
                     $(this).parent().children(".context").slideToggle("slow");
@@ -174,6 +174,7 @@ $("document").ready(function(){
                   $target.focus();
               });
             })
+				//console.log(sessionStorage.utente);
                 var u2=JSON.parse(sessionStorage.utente);
                 var l2=u2.length;
                 $("#nickname").html(" "+ u2[l2-1].nome);

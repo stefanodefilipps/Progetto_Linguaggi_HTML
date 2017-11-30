@@ -54,3 +54,4 @@ function signup(){
                d2.style.display="none";
                d.style.display="block";
            }
+           console.log(sessionStorage.utente);
