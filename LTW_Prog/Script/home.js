@@ -19,13 +19,12 @@ $("document").ready(function(){
                     $("#titolo").css("border","1px solid #ccc");
                     $("#testo").css("border","1px solid #ccc");
                     $("#testo_icona").css("color","black");
+                    $("#titolo2").css("border","1px solid #ccc");
                 }
                 else target = $("#form");
                 $('html, body').animate({
                   scrollTop: target.offset().top
                 }, 1000, function() {
-                  // Callback after animation
-                  // Must change focus!
                   var $target = $(target);
                   $target.focus();
               });
@@ -64,6 +63,13 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                var target = $("#barra");
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000, function() {
+                  var $target = $(target);
+                  $target.focus();
+              });
 
             })
             $("#provaC").click(function(){
@@ -81,6 +87,13 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "orange", "color": "white"});
+                var target = $("#barra");
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000, function() {
+                  var $target = $(target);
+                  $target.focus();
+              });
 
             })
             $("#provaT").click(function(){
@@ -96,6 +109,13 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "orange", "color": "white"});
+                var target = $("#barra");
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000, function() {
+                  var $target = $(target);
+                  $target.focus();
+              });
 
             })
              $("#provaI").click(function(){
@@ -112,6 +132,13 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "orange", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                var target = $("#barra");
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000, function() {
+                  var $target = $(target);
+                  $target.focus();
+              });
 
             })
               $("#provaE").click(function(){
@@ -127,6 +154,13 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "orange", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                var target = $("#barra");
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000, function() {
+                  var $target = $(target);
+                  $target.focus();
+              });
 
             })
                $("#provaCin").click(function(){
@@ -142,6 +176,13 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "orange", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                var target = $("#barra");
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000, function() {
+                  var $target = $(target);
+                  $target.focus();
+              });
 
             })
                 $("#provaM").click(function(){
@@ -157,6 +198,13 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "orange", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                var target = $("#barra");
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000, function() {
+                  var $target = $(target);
+                  $target.focus();
+              });
             })
 
             $("#check").click(function(){
@@ -173,6 +221,8 @@ $("document").ready(function(){
                 else{
                 if($("#titolo").val() == "" || !categorie.includes($("#titolo").val().trim().toLowerCase() )){
                     $("#titolo").css("border","3px solid red");
+                    if($("#titolo2").val() == "") $("#titolo2").css("border","3px solid red");
+                    else $("#titolo2").css("border","1px solid #ccc");
                     if($("#testo").val() == "") $("#testo").css("border","3px solid red");
                     else $("#testo").css("border","1px solid #ccc");
                     if($("#file_")[0].files[0] == undefined){
@@ -187,7 +237,7 @@ $("document").ready(function(){
                     $("#testo").css("border","3px solid red");
                     if($("#titolo").val() == "") $("#titolo").css("border","3px solid red");
                     else $("#titolo").css("border","1px solid #ccc");
-                    if($("#titolo2").val() == "") $("#titolo").css("border","3px solid red");
+                    if($("#titolo2").val() == "") $("#titolo2").css("border","3px solid red");
                     else $("#titolo2").css("border","1px solid #ccc");
                     if($("#file_")[0].files[0] == undefined){
                         $("#testo_icona").css("color","red");
@@ -261,8 +311,6 @@ $("document").ready(function(){
                 $('html, body').animate({
                   scrollTop: target.offset().top
                 }, 1000, function() {
-                  // Callback after animation
-                  // Must change focus!
                   var $target = $(target);
                   $target.focus();
               });
