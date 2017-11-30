@@ -1,3 +1,4 @@
+
 body {
 	margin: 0;
 	height: auto;
@@ -135,6 +136,7 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 	border: 1px solid #ccc;
     border-radius: 4px;
     padding: 12px 20px;
+    text-align: justify;
 }
 
 #new_post button:active {
@@ -183,12 +185,14 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 	resize: none;
 	background-color: white;
 	margin:0;
+	overflow: hidden;
 }
 .icons{
 	background-color: white;
 	font-size: 30px;
 	width: 100%;
-	height: 40px; 
+	height: 40px;
+	padding-left: 5%; 
 
 }
 .imm{
@@ -196,9 +200,10 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 	height:140px;
 }
 
-<i class="fa fa-music" aria-hidden="true"></i>
-<i class="fa fa-futbol-o" aria-hidden="true"></i>
-<i class="fa fa-film" aria-hidden="true"></i>
-<i class="fa fa-home" aria-hidden="true"></i>
-<i class="fa fa-globe" aria-hidden="true"></i>
-<i class="fa fa-table" aria-hidden="true"></i>
+.child{
+	overflow: auto;
+	height: 90%;
+	padding-right: 5%;
+	padding-left: 5%;
+	text-align: justify;
+}
