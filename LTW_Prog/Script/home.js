@@ -1,6 +1,7 @@
 $("document").ready(function(){
             var mostra = false;
             $("#icona").click(function(){
+
                 
                 if($("#sport").css("background-color")=="rgb(255, 165, 0)" || $("#arte").css("background-color")=="rgb(255, 165, 0)" || $("#attualità").css("background-color") =="rgb(255, 165, 0)"){
                 $("#titolo").css("display","none");
@@ -54,6 +55,12 @@ $("document").ready(function(){
                 $("#icon_bar").slideToggle("slow");
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-rss").slideToggle();},800);
+                $(".calcio").fadeIn();
+                $(".italia").fadeIn();
+                $(".estero").fadeIn();
+                $(".cinema").fadeIn();
+                $(".tennis").fadeIn();
+                $(".musica").fadeIn();
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
@@ -63,6 +70,14 @@ $("document").ready(function(){
                 $("#icon_bar").slideToggle("slow");
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-futbol-o").slideToggle();},800);
+                $(".tennis").fadeOut();
+                $(".italia").fadeOut();
+                $(".estero").fadeOut();
+                $(".cinema").fadeOut();
+                $(".musica").fadeOut();
+                $(".calcio").fadeOut().delay(500).fadeIn();
+                
+
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "orange", "color": "white"});
@@ -72,6 +87,12 @@ $("document").ready(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-table").slideToggle();},800);
+                $(".calcio").fadeOut();
+                $(".italia").fadeOut();
+                $(".estero").fadeOut();
+                $(".cinema").fadeOut();
+                $(".musica").fadeOut();
+                $(".tennis").fadeOut().delay(500).fadeIn();
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "orange", "color": "white"});
@@ -81,6 +102,13 @@ $("document").ready(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-home").slideToggle();},800);
+                $(".calcio").fadeOut();
+                $(".tennis").fadeOut();
+                $(".estero").fadeOut();
+                $(".cinema").fadeOut();
+                $(".musica").fadeOut();
+                $(".italia").fadeOut().delay(500).fadeIn();
+                
                 $("#attualità").css({"background": "orange", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
@@ -90,6 +118,12 @@ $("document").ready(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-globe").slideToggle();},800);
+                $(".calcio").fadeOut();
+                $(".italia").fadeOut();
+                $(".tennis").fadeOut();
+                $(".cinema").fadeOut();
+                $(".musica").fadeOut();
+                $(".estero").fadeOut().delay(500).fadeIn();
                 $("#attualità").css({"background": "orange", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
@@ -99,6 +133,12 @@ $("document").ready(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-film").slideToggle();},800);
+                $(".calcio").fadeOut();
+                $(".italia").fadeOut();
+                $(".estero").fadeOut();
+                $(".tennis").fadeOut();
+                $(".musica").fadeOut();
+                $(".cinema").fadeOut().delay(500).fadeIn();
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "orange", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
@@ -108,6 +148,12 @@ $("document").ready(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-music").slideToggle();},800);
+                $(".calcio").fadeOut();
+                $(".italia").fadeOut();
+                $(".estero").fadeOut();
+                $(".cinema").fadeOut();
+                $(".tennis").fadeOut();
+                $(".musica").fadeOut().delay(500).fadeIn();
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "orange", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
