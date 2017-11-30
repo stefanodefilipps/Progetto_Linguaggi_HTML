@@ -1,6 +1,11 @@
 $("document").ready(function(){
-    var mostra = false;
+            var mostra = false;
             $("#icona").click(function(){
+                
+                if($("#sport").css("background-color")=="rgb(255, 165, 0)" || $("#arte").css("background-color")=="rgb(255, 165, 0)" || $("#attualità").css("background-color") =="rgb(255, 165, 0)"){
+                $("#titolo").css("display","none");
+
+                } else $("#titolo").css("display","block");
                 $("#form").fadeToggle("slow");
                 $("#icona").toggleClass("fa fa-plus-circle");
                 $("#icona").toggleClass("fa fa-minus-circle");
@@ -44,6 +49,15 @@ $("document").ready(function(){
             	var somma =parseInt(h);
             	somma=somma + 1;
             	$(this).html(" "+somma+"");
+            })
+            $("#icon_bar").click(function(){
+                $("#icon_bar").slideToggle("slow");
+                window.setTimeout(function(){
+                $("#icon_bar").removeClass().addClass("fa fa-rss").slideToggle();},800);
+                $("#attualità").css({"background": "black", "color": "white"});
+                $("#arte").css({"background": "black", "color": "white"});
+                $("#sport").css({"background": "black", "color": "white"});
+
             })
             $("#provaC").click(function(){
                 $("#icon_bar").slideToggle("slow");
@@ -100,7 +114,18 @@ $("document").ready(function(){
             })
 
             $("#check").click(function(){
-                if($("#titolo").val() == ""){
+                var categorie=["cinema","musica","italia","estero","calcio","tennis"];
+                
+                if($("#titolo").css("display")=="none"){
+                    if($("#icon_bar").attr("class")=="fa fa-music") $("#titolo").val("musica");
+                    if($("#icon_bar").attr("class")=="fa fa-futbol-o") $("#titolo").val("calcio");
+                    if($("#icon_bar").attr("class")=="fa fa-film") $("#titolo").val("cinema");
+                    if($("#icon_bar").attr("class")=="fa fa-home") $("#titolo").val("italia");
+                    if($("#icon_bar").attr("class")=="fa fa-globe") $("#titolo").val("estero");
+                    if($("#icon_bar").attr("class")=="fa fa-table") $("#titolo").val("tennis");
+                }
+                else{
+                if($("#titolo").val() == "" || !categorie.includes($("#titolo").val().trim().toLowerCase() )){
                     $("#titolo").css("border","3px solid red");
                     if($("#testo").val() == "") $("#testo").css("border","3px solid red");
                     else $("#testo").css("border","1px solid #ccc");
@@ -110,8 +135,24 @@ $("document").ready(function(){
                     else $("#testo_icona").css("color","black");
                     return;
                 } 
+                }
+                
                 if($("#testo").val() == ""){
                     $("#testo").css("border","3px solid red");
+                    if($("#titolo").val() == "") $("#titolo").css("border","3px solid red");
+                    else $("#titolo").css("border","1px solid #ccc");
+                    if($("#titolo2").val() == "") $("#titolo").css("border","3px solid red");
+                    else $("#titolo2").css("border","1px solid #ccc");
+                    if($("#file_")[0].files[0] == undefined){
+                        $("#testo_icona").css("color","red");
+                    }
+                    else $("#testo_icona").css("color","black");
+                    return;
+                }
+                if($("#titolo2").val() == ""){
+                    $("#titolo2").css("border","3px solid red");
+                    if($("#testo").val() == "") $("#testo").css("border","3px solid red");
+                    else $("#testo").css("border","1px solid #ccc");
                     if($("#titolo").val() == "") $("#titolo").css("border","3px solid red");
                     else $("#titolo").css("border","1px solid #ccc");
                     if($("#file_")[0].files[0] == undefined){
@@ -119,23 +160,29 @@ $("document").ready(function(){
                     }
                     else $("#testo_icona").css("color","black");
                     return;
-                }
+                } 
                 if($("#file_")[0].files[0] == undefined){
                     $("#testo_icona").css("color","red");
+                    if($("#titolo2").val() == "") $("#titolo").css("border","3px solid red");
+                    else $("#titolo2").css("border","1px solid #ccc");
                     if($("#titolo").val() == "") $("#titolo").css("border","3px solid red");
                     else $("#titolo").css("border","1px solid #ccc");
                     if($("#testo").val() == "") $("#testo").css("border","3px solid red");
                     else $("#testo").css("border","1px solid #ccc");
                     return;
                 }  
+                $("#titolo2").css("border","1px solid #ccc");
                 $("#titolo").css("border","1px solid #ccc");
                 $("#testo").css("border","1px solid #ccc");
                 $("#testo_icona").css("color","black");
-                var riga = $("<div class = \"row\"><div class = \"_post\" ><div class=\"imm\"></div><div class=\"context\"><div class=\"icons\" >"+$("#nickname").html()+" <i  class=\"fa fa-thumbs-up\" aria-hidden=\"true\" > 0</i>\n<i class=\"fa fa-thumbs-down\" aria-hidden=\"true\"> 0</i></div><div class=\"ta\" name=\"post_testo\"><div class =\"child\"></div></div></div></div></div>");
+
+                var riga = $("<div class = \""+$("#titolo").val().toLowerCase().trim()+" row \""+ "><div class = \"_post\" ><div class=\"imm\"></div><div class=\"context\"><div class=\"icons\" >"+$("#nickname").html()+" <i  class=\"fa fa-thumbs-up\" aria-hidden=\"true\" > 0</i>\n<i class=\"fa fa-thumbs-down\" aria-hidden=\"true\"> 0</i></div><div class=\"ta\" name=\"post_testo\"><div class =\"child\"></div></div></div></div></div>");
+                
                 riga.find("._post").css("background-image","url("+URL.createObjectURL($("#file_")[0].files[0])+")");
-                riga.find(".child").html("<h1>"+$("#titolo").val()+"</h1></br>"+$("#testo").val());
+                riga.find(".child").html("<h1>"+$("#titolo2").val()+"</h1></br>"+$("#testo").val());
                 riga.css("display","none");
                 $("#titolo").val("");
+                $("#titolo2").val("");
                 $("#testo").val("");
                 $("#post").prepend(riga);
                 riga.find(".imm").click(function(){
@@ -174,10 +221,9 @@ $("document").ready(function(){
                   $target.focus();
               });
             })
-				//console.log(sessionStorage.utente);
-                var u2=JSON.parse(sessionStorage.utente);
-                var l2=u2.length;
-                $("#nickname").html(" "+ u2[l2-1].nome);
-                $("#foto").attr("src", u2[l2-1].foto.split("fakepath")[1].substring(1));
+            
+                
+            $("#nickname").html(" "+ sessionStorage.getItem("nome"));
+            $("#foto").attr("src", sessionStorage.getItem("foto").split("fakepath")[1].substring(1));
         })
                 

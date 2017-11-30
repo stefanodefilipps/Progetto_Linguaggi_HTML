@@ -15,10 +15,9 @@ function signup(){
                    u[l]=s;
                    alert("Ti sei registrato su MYBLOG!");
                    localStorage.utenti=JSON.stringify(u);
-                   var u2=JSON.parse(sessionStorage.utente);
-                   var l2=u2.length
-                   u2[l2]=s;
-                   alert(u2[l2].nome);
+                   sessionStorage.setItem("nome",s["nome"]);
+                   sessionStorage.setItem("foto",s["foto"]);
+                   alert(sessionStorage.getItem("nome"));
                    return true;                    
                 }
             function signin(){
@@ -26,14 +25,8 @@ function signup(){
                    var l = u.length;
                    for (i=0;i<l;i++){
                        if(u[i].nome == document.getElementById("login").nome.value && u[i].password == document.getElementById("login").password.value) {
-                       	       var u2=JSON.parse(sessionStorage.utente);
-                       	       var l2=u2.length
-                               var s= { nome:document.getElementById("login").nome.value,
-                                        foto:u[i].foto
-                               };
-                       	       u2[l2]=s;
-                       	       alert(u2[l2].nome);
-                       	       sessionStorage.utente=JSON.stringify(u2);
+                       	       sessionStorage.setItem("nome",u[i].nome);
+                               sessionStorage.setItem("foto",u[i].foto);
                        	       return true;
                        }
                    }
@@ -44,8 +37,8 @@ function signup(){
                     if (typeof(localStorage.utenti) == "undefined") {
                     localStorage.utenti="[]";
                 }
-                    if (typeof(sessionStorage.utente) == "undefined") {
-                    sessionStorage.utente="[]";
+                    if (typeof(sessionStorage) == "undefined") {
+                    sessionStorage="[]";
                }
            }
            function turnvisible(){
@@ -54,4 +47,3 @@ function signup(){
                d2.style.display="none";
                d.style.display="block";
            }
-           console.log(sessionStorage.utente);
