@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-    <title> Prova menù HTML-CSS </title>
+    <title>MyBlog</title>
 	<link rel="stylesheet" href="/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Stili/home_css.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -91,9 +91,10 @@
             </div>
             <div class = "row">
                 <div class= "col-6">
-                    <input type="search" name="search" placeholder="Cerca nel sito">
-                    <button type="button">Cerca</button>
+                    <form name = "SearchForm">
+                        <input type="text" name="testo" placeholder="Cerca nel sito">
                     </form>
+                    <input type="button" id="cerca" value="cerca">
              </div>
             </div>
         </div>

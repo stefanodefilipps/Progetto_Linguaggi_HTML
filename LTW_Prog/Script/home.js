@@ -319,5 +319,33 @@ $("document").ready(function(){
                 
             $("#nickname").html(" "+ sessionStorage.getItem("nome"));
             $("#foto").attr("src", sessionStorage.getItem("foto").split("fakepath")[1].substring(1));
+
+            $("#cerca").click(function(){
+                    var trovato;
+                    if(document.SearchForm.testo.value == ''){
+                        alert('Nulla da cercare');
+                        return;
+                    }
+                    else{
+                        $("h1").each(function(index){
+                            $(this).html().match(document.SearchForm.testo.value);
+                            trovato = $(this).html().match(document.SearchForm.testo.value);
+                            console.log(trovato);
+                            var y = $(this).parent().parent().parent().parent().parent();
+                            if(trovato!= null){
+                                console.log(y);
+                                y.fadeIn();
+                            }
+                            else{
+                                y.fadeOut();
+                            }
+                        })
+                        };
+                        
+                        
+                
+
+            })
+
         })
                 
