@@ -208,3 +208,23 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 	text-align: justify;
 }
 
+#cerca {
+	width: 60%;
+	height: 60px;
+	background-color: black;
+	border-radius: 15px;
+}
+
+#cerca i {
+	color: white;
+	font-size: 40px;
+}
+
+#find {
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 30px;
+    text-align: center;
+    width: 100%;
+}
+
