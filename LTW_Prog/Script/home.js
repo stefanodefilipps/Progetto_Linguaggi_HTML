@@ -74,9 +74,9 @@ $("document").ready(function(){
                 $("#form").fadeOut("slow");
                 if($("#icona").hasClass("fa-minus-circle")){
                     $("#icona").toggleClass("fa fa-minus-circle");
-                    $("#icona").toggleClass("fa fa-plus-circle")
+                    $("#icona").toggleClass("fa fa-plus-circle");
+                    mostra=!mostra;
                 }
-                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -104,9 +104,9 @@ $("document").ready(function(){
                 $("#form").fadeOut("slow");
                 if($("#icona").hasClass("fa-minus-circle")){
                     $("#icona").toggleClass("fa fa-minus-circle");
-                    $("#icona").toggleClass("fa fa-plus-circle")
+                    $("#icona").toggleClass("fa fa-plus-circle");
+                    mostra=!mostra;
                 }
-                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -132,9 +132,9 @@ $("document").ready(function(){
                 $("#form").fadeOut("slow");
                 if($("#icona").hasClass("fa-minus-circle")){
                     $("#icona").toggleClass("fa fa-minus-circle");
-                    $("#icona").toggleClass("fa fa-plus-circle")
+                    $("#icona").toggleClass("fa fa-plus-circle");
+                    mostra=!mostra;
                 }
-                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -161,9 +161,9 @@ $("document").ready(function(){
                 $("#form").fadeOut("slow");
                 if($("#icona").hasClass("fa-minus-circle")){
                     $("#icona").toggleClass("fa fa-minus-circle");
-                    $("#icona").toggleClass("fa fa-plus-circle")
+                    $("#icona").toggleClass("fa fa-plus-circle");
+                    mostra=!mostra;
                 }
-                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -189,9 +189,9 @@ $("document").ready(function(){
                 $("#form").fadeOut("slow");
                 if($("#icona").hasClass("fa-minus-circle")){
                     $("#icona").toggleClass("fa fa-minus-circle");
-                    $("#icona").toggleClass("fa fa-plus-circle")
+                    $("#icona").toggleClass("fa fa-plus-circle");
+                    mostra=!mostra;
                 }
-                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -217,9 +217,9 @@ $("document").ready(function(){
                 $("#form").fadeOut("slow");
                 if($("#icona").hasClass("fa-minus-circle")){
                     $("#icona").toggleClass("fa fa-minus-circle");
-                    $("#icona").toggleClass("fa fa-plus-circle")
+                    $("#icona").toggleClass("fa fa-plus-circle");
+                    mostra=!mostra;
                 }
-                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -245,9 +245,9 @@ $("document").ready(function(){
                 $("#form").fadeOut("slow");
                 if($("#icona").hasClass("fa-minus-circle")){
                     $("#icona").toggleClass("fa fa-minus-circle");
-                    $("#icona").toggleClass("fa fa-plus-circle")
+                    $("#icona").toggleClass("fa fa-plus-circle");
+                    mostra=!mostra;
                 }
-                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
