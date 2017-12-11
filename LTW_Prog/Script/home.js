@@ -341,6 +341,10 @@ $("document").ready(function(){
                     var somma =parseInt(h);
                     somma=somma + 1;
                     $(this).html(" "+somma+"");
+                    var h = $("#like").html();
+                    var somma =parseInt(h);
+                    somma=somma + 1;
+                    $("#like").html(" "+somma+"");
                 })
 
                 riga.find(".fa-thumbs-down").click(function(){
@@ -350,6 +354,10 @@ $("document").ready(function(){
                     var somma =parseInt(h);
                     somma=somma + 1;
                     $(this).html(" "+somma+"");
+                    var h = $("#dislike").html();
+                    var somma =parseInt(h);
+                    somma=somma + 1;
+                    $("#dislike").html(" "+somma+"");
                 })
 
                 riga.fadeIn("slow");
