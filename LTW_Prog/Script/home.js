@@ -71,6 +71,12 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                $("#form").fadeOut("slow");
+                if($("#icona").hasClass("fa-minus-circle")){
+                    $("#icona").toggleClass("fa fa-minus-circle");
+                    $("#icona").toggleClass("fa fa-plus-circle")
+                }
+                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -95,6 +101,12 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "orange", "color": "white"});
+                $("#form").fadeOut("slow");
+                if($("#icona").hasClass("fa-minus-circle")){
+                    $("#icona").toggleClass("fa fa-minus-circle");
+                    $("#icona").toggleClass("fa fa-plus-circle")
+                }
+                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -117,6 +129,12 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "orange", "color": "white"});
+                $("#form").fadeOut("slow");
+                if($("#icona").hasClass("fa-minus-circle")){
+                    $("#icona").toggleClass("fa fa-minus-circle");
+                    $("#icona").toggleClass("fa fa-plus-circle")
+                }
+                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -140,6 +158,12 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "orange", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                $("#form").fadeOut("slow");
+                if($("#icona").hasClass("fa-minus-circle")){
+                    $("#icona").toggleClass("fa fa-minus-circle");
+                    $("#icona").toggleClass("fa fa-plus-circle")
+                }
+                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -162,6 +186,12 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "orange", "color": "white"});
                 $("#arte").css({"background": "black", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                $("#form").fadeOut("slow");
+                if($("#icona").hasClass("fa-minus-circle")){
+                    $("#icona").toggleClass("fa fa-minus-circle");
+                    $("#icona").toggleClass("fa fa-plus-circle")
+                }
+                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -184,6 +214,12 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "orange", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                $("#form").fadeOut("slow");
+                if($("#icona").hasClass("fa-minus-circle")){
+                    $("#icona").toggleClass("fa fa-minus-circle");
+                    $("#icona").toggleClass("fa fa-plus-circle")
+                }
+                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -206,6 +242,12 @@ $("document").ready(function(){
                 $("#attualità").css({"background": "black", "color": "white"});
                 $("#arte").css({"background": "orange", "color": "white"});
                 $("#sport").css({"background": "black", "color": "white"});
+                $("#form").fadeOut("slow");
+                if($("#icona").hasClass("fa-minus-circle")){
+                    $("#icona").toggleClass("fa fa-minus-circle");
+                    $("#icona").toggleClass("fa fa-plus-circle")
+                }
+                mostra=!mostra;
                 var target = $("#barra");
                 $('html, body').animate({
                   scrollTop: target.offset().top
@@ -334,14 +376,15 @@ $("document").ready(function(){
 
             $("#cerca").click(function(){
                     var trovato;
-                    if(document.SearchForm.testo.value == ''){
+                    var input = $("#find");
+                    if(input.val() == ''){
                         alert('Nulla da cercare');
                         return;
                     }
                     else{
                         $("h1").each(function(index){
-                            $(this).html().match(document.SearchForm.testo.value);
-                            trovato = $(this).html().match(document.SearchForm.testo.value);
+                            $(this).html().match(input.val());
+                            trovato = $(this).html().match(input.val());
                             console.log(trovato);
                             var y = $(this).parent().parent().parent().parent().parent();
                             if(trovato!= null){
@@ -361,8 +404,6 @@ $("document").ready(function(){
 		                  var $target = $(target);
 		                  $target.focus();
 		              });
-                
-
             })
 
         })

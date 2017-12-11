@@ -3,6 +3,7 @@
         <title>MyBlog_LogIn</title>
         <link rel="stylesheet" href="/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Stili/stilelogin.css">
         <script type="text/javascript" src="/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Script/login.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
         <body onload="inizializzaStorageUtenti();">
             <div id="centro"  name="principale"  >
@@ -35,7 +36,7 @@
                     <td><input type="password" name="password" size ="30" maxlenght="30" required>
                     <tr>
                     <td align="right"><p>foto</p>
-                    <td><input type="file" name="foto">
+                    <td><input type="file" name="foto" id="i_foto">
                     <tr>
                     <td align="center"> <td ><input type="reset" value="Reset dati inseriti"> <input type="submit" value="Sign Up" ></table>
                     </form>

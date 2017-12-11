@@ -13,11 +13,9 @@ function signup(){
                            foto:document.getElementById("logup").foto.value
                            };
                    u[l]=s;
-                   alert("Ti sei registrato su MYBLOG!");
                    localStorage.utenti=JSON.stringify(u);
                    sessionStorage.setItem("nome",s["nome"]);
                    sessionStorage.setItem("foto",s["foto"]);
-                   alert(sessionStorage.getItem("nome"));
                    return true;                    
                 }
             function signin(){

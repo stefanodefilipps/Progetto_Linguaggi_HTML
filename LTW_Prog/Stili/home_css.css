@@ -209,22 +209,23 @@ nav ul li li:hover a{background: #000; color: #FFF;}
 }
 
 #cerca {
-	width: 60%;
-	height: 60px;
+	width: 35%;
+	height: 45px;
 	background-color: black;
 	border-radius: 15px;
 }
 
 #cerca i {
 	color: white;
-	font-size: 40px;
+	font-size: 35px;
 }
 
 #find {
 	border: 1px solid #ccc;
     border-radius: 4px;
-    height: 30px;
+    height: 43px;
     text-align: center;
-    width: 100%;
+    width: 60%;
+    float: left;
+    font-size: 20px;
 }
-
