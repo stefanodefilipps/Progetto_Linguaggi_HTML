@@ -45,3 +45,10 @@ function signup(){
                d2.style.display="none";
                d.style.display="block";
            }
+
+           function turninvisible(){
+               var d=document.getElementById("registrazione");
+               var d2=document.getElementById("centro");
+               d2.style.display="block";
+               d.style.display="none";
+           }

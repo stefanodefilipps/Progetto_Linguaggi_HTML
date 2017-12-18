@@ -1,10 +1,65 @@
 
-    body{ background-image:url(/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Login/m.png); }
-    #centro{background-color:white; border-style: solid; width:40%; height:99% ; position:absolute; top:1%; left:20%; margin-left: 9%; }
-    #registrazione{display:none; background-color:white;border-style: solid; width:40%; height:99% ; position:absolute; top:1%; left:20%; margin-left: 9%; }
-    p{ font-family:"sans-serif";}
-    #1{color:#0062E1;}
-    input[type=button],[type=submit]{ background-color: #C0C0C0;
+    body{ 
+        background-image:url(/home/biar/Desktop/Progetto_Linguaggi_HTML/LTW_Prog/Login/m.png);
+    }
+
+    #centro{
+        background-color:white;
+        border-style: solid;
+        width:40%;
+        height:99%;
+        position:absolute; top:1%;
+        left:20%;
+        margin-left: 9%;
+    }
+
+    #registrazione{
+        display:none;
+        background-color:white;
+        border-style: solid;
+        width:40%;
+        height:99%;
+        position:absolute;
+        top:1%;
+        left:20%;
+        margin-left:9%;
+    }
+
+    p{
+        font-family:"sans-serif";
+    }
+
+    #1{
+        color:#0062E1;
+    }
+
+    input[type=button],[type=submit]{
+        background-color: #C0C0C0;
+        border: none;
+        color: black;
+        padding: 8px 8px;
+        text-decoration: none;
+        margin: 2px 2px;
+        cursor: pointer;
+        border-radius:50%;
+        box-shadow: 1px 1px 3px #888888;
+    }
+
+    input[type=button]:hover,[type=submit]:hover{
+          background-color: #FFA500 ;
+    }
+
+    input[type=reset],input[type=file]{
+        font-family:"sans-serif";
+    }
+    
+    .logo {
+        height:350px;
+        width:350px;
+    }
+
+    button {
+        background-color: #C0C0C0;
     border: none;
     color: black;
     padding: 8px 8px;
@@ -12,15 +67,5 @@
     margin: 2px 2px;
     cursor: pointer;
     border-radius:50%;
-    box-shadow: 1px 1px 3px #888888;}
-    input[type=button]:hover,[type=submit]:hover{
-          background-color: #FFA500 ;
-
-    }
-        input[type=reset],input[type=file]{
-            font-family:"sans-serif";
-        }
-    .logo {
-        height:350px;
-        width:350px;
+    box-shadow: 1px 1px 3px #888888;
     }
