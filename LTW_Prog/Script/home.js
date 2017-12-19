@@ -1,8 +1,12 @@
 $("document").ready(function(){
-            var mostra = false;
-            $("#icona").click(function(){
+            
+            //SERVE PER GESTIRE LA VISIONE DELLA FORM DI AGGIUNTA POST
 
-                
+            var mostra = false;
+
+            //SERVE PER GESTIRE LA VISUALIZZAZIONE O MENO DELLA FORM PER L'AGGIUNTA DI UN NUOVO POST
+
+            $("#icona").click(function(){
                 if($("#sport").css("background-color")=="rgb(255, 165, 0)" || $("#arte").css("background-color")=="rgb(255, 165, 0)" || $("#attualità").css("background-color") =="rgb(255, 165, 0)"){
                 $("#titolo").css("display","none");
 
@@ -29,9 +33,15 @@ $("document").ready(function(){
                   $target.focus();
               });
             })
+
+            //SERVE PER PERMETTERE AL POST DI MOSTRARE PER INTERO L'IMMAGINE DI BACKGROUND
+
             $(".imm").click(function(){
             	$(this).parent().find(".context").slideToggle("slow");
             })
+
+            //LE DUE FUN SEGUENTI SERVONO PER GESTIRE I POLLICI IN SU O GIU IN OGNI POST E CAMBIARE COLORE E MODIFICARE IL VALORE DELLA COLONNA A SINISTRA
+
             $(".fa-thumbs-up").click(function(){
             	console.log($(this).parent().children(".fa-thumbs-up").css("color"));
             	if($(this).css("color") == "rgb(0, 128, 0)" || $(this).parent().children(".fa-thumbs-down").css("color")=="rgb(255, 0, 0)") return;
@@ -58,6 +68,10 @@ $("document").ready(function(){
             	somma=somma + 1;
             	$("#dislike").html(" "+somma+"");
             })
+
+            // LE FUNZIONI CHE SEGUONO SERVONO PER GESTIRE LA VISUALIZZAZIONE DEI VARI POST IN BASE ALLA LORO CLASSE AL CLICK DI UNA DELLE OPZIONI
+            // DEI MENU A TENDINI E DELL'ICONA GENERALE IN ALTO A SINISTRA
+
             $("#icon_bar").click(function(){
                 $("#icon_bar").slideToggle("slow");
                 window.setTimeout(function(){
@@ -86,6 +100,8 @@ $("document").ready(function(){
               });
 
             })
+
+
             $("#provaC").click(function(){
                 $("#icon_bar").slideToggle("slow");
                 window.setTimeout(function(){
@@ -116,6 +132,8 @@ $("document").ready(function(){
               });
 
             })
+
+
             $("#provaT").click(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
@@ -144,6 +162,8 @@ $("document").ready(function(){
               });
 
             })
+
+
              $("#provaI").click(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
@@ -173,6 +193,8 @@ $("document").ready(function(){
               });
 
             })
+
+
               $("#provaE").click(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
@@ -201,6 +223,8 @@ $("document").ready(function(){
               });
 
             })
+
+
                $("#provaCin").click(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
@@ -229,6 +253,8 @@ $("document").ready(function(){
               });
 
             })
+
+
                 $("#provaM").click(function(){
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
@@ -256,6 +282,9 @@ $("document").ready(function(){
                   $target.focus();
               });
             })
+
+            //SERVER PER L'AGGIUNTA DI UN POST ALLA PAGINA DOPO AVER CONTROLLATO CHE TUTTI I CAMPI SONO STTAI RIEMPITI E IN QUALE CATEGORIA
+            //SONO ATTUALMENTE
 
             $("#check").click(function(){
                 var categorie=["cinema","musica","italia","estero","calcio","tennis"];
@@ -378,9 +407,7 @@ $("document").ready(function(){
             	$("#mypost").html(" "+somma+"");
             })
             
-                
-            $("#nickname").html(" "+ sessionStorage.getItem("nome"));
-            $("#foto").attr("src", sessionStorage.getItem("foto").split("fakepath")[1].substring(1));
+            //FUNZIONE PER LA RICERCA DI UN POST ALL'INTERNO DELLA PAGINA IN BASE AL TITOLO
 
             $("#cerca").click(function(){
                     var trovato;
@@ -412,7 +439,14 @@ $("document").ready(function(){
 		                  var $target = $(target);
 		                  $target.focus();
 		              });
+
+                    input.val("");
             })
+
+            //SERVE PER GESTIRE IL LOCAL STORAGE E CARICARE IMMAGINE E FOTO DELL'ULTIMO UTENTE
+
+            $("#nickname").html(" "+ sessionStorage.getItem("nome"));
+            $("#foto").attr("src", sessionStorage.getItem("foto").split("fakepath")[1].substring(1));
 
         })
                 
