@@ -7,6 +7,7 @@ $("document").ready(function(){
             //SERVE PER GESTIRE LA VISUALIZZAZIONE O MENO DELLA FORM PER L'AGGIUNTA DI UN NUOVO POST
 
             $("#icona").click(function(){
+                NotHighLight();
                 if($("#sport").css("background-color")=="rgb(255, 165, 0)" || $("#arte").css("background-color")=="rgb(255, 165, 0)" || $("#attualità").css("background-color") =="rgb(255, 165, 0)"){
                 $("#titolo").css("display","none");
 
@@ -73,6 +74,7 @@ $("document").ready(function(){
             // DEI MENU A TENDINI E DELL'ICONA GENERALE IN ALTO A SINISTRA
 
             $("#icon_bar").click(function(){
+                NotHighLight();
                 $("#icon_bar").slideToggle("slow");
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-rss").slideToggle();},800);
@@ -103,6 +105,7 @@ $("document").ready(function(){
 
 
             $("#provaC").click(function(){
+                NotHighLight();
                 $("#icon_bar").slideToggle("slow");
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-futbol-o").slideToggle();},800);
@@ -135,6 +138,7 @@ $("document").ready(function(){
 
 
             $("#provaT").click(function(){
+                NotHighLight();
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-table").slideToggle();},800);
@@ -165,6 +169,7 @@ $("document").ready(function(){
 
 
              $("#provaI").click(function(){
+                NotHighLight();
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-home").slideToggle();},800);
@@ -196,6 +201,7 @@ $("document").ready(function(){
 
 
               $("#provaE").click(function(){
+                NotHighLight();
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-globe").slideToggle();},800);
@@ -226,6 +232,7 @@ $("document").ready(function(){
 
 
                $("#provaCin").click(function(){
+                NotHighLight();
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-film").slideToggle();},800);
@@ -255,7 +262,8 @@ $("document").ready(function(){
             })
 
 
-                $("#provaM").click(function(){
+            $("#provaM").click(function(){
+                NotHighLight();
             	$("#icon_bar").slideToggle();
                 window.setTimeout(function(){
                 $("#icon_bar").removeClass().addClass("fa fa-music").slideToggle();},800);
@@ -287,6 +295,7 @@ $("document").ready(function(){
             //SONO ATTUALMENTE
 
             $("#check").click(function(){
+                NotHighLight();
                 var categorie=["cinema","musica","italia","estero","calcio","tennis"];
                 
                 if($("#titolo").css("display")=="none"){
@@ -410,6 +419,7 @@ $("document").ready(function(){
             //FUNZIONE PER LA RICERCA DI UN POST ALL'INTERNO DELLA PAGINA IN BASE AL TITOLO
 
             $("#cerca").click(function(){
+                    NotHighLight();
                     var trovato;
                     var input = $("#find");
                     if(input.val() == ''){
@@ -423,6 +433,9 @@ $("document").ready(function(){
                             console.log(trovato);
                             var y = $(this).parent().parent().parent().parent().parent();
                             if(trovato!= null){
+                                var st =  $(this).html();
+                                st = st.replace(input.val(),"<span style =\"background-color:orange;\">"+input.val()+"</span>");
+                                $(this).html(st);
                                 console.log(y);
                                 y.fadeIn();
                             }
@@ -443,10 +456,24 @@ $("document").ready(function(){
                     input.val("");
             })
 
+            function NotHighLight(){
+                $("h1").each(function(index){
+                    trovato = $(this).html().match("<span");
+                    console.log(trovato);
+                    if(trovato != null){
+                        console.log($(this).find("span"));
+                        var st = $(this).find("span").html();
+                        st.replace("<span style =\"background-color:orange;\">"+st+"</span>",st);
+                        $(this).html(st);
+                    }
+                })
+            }
+
             //SERVE PER GESTIRE IL LOCAL STORAGE E CARICARE IMMAGINE E FOTO DELL'ULTIMO UTENTE
 
             $("#nickname").html(" "+ sessionStorage.getItem("nome"));
             $("#foto").attr("src", sessionStorage.getItem("foto").split("fakepath")[1].substring(1));
 
         })
+
                 
